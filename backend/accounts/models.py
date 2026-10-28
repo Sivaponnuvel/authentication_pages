@@ -1,5 +1,7 @@
 from django.db import models
 
+# Create your models here.
+
 class Register(models.Model):
     username = models.CharField(max_length=200, unique=True)
     first_name = models.CharField(max_length=200)
@@ -9,3 +11,6 @@ class Register(models.Model):
     GENDER_CHOICES = [("male", "Male"), ("female", "Female"), ("others", "Others")]
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
     password = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.username
