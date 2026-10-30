@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function RegisterPage() {
-    const[formData, serFormData] = useState({
+    const[formData, setFormData] = useState({
         username: '',
         first_name: '',
         last_name: '',
@@ -14,7 +14,7 @@ function RegisterPage() {
     });
 
     const handleChange = (e) =>{
-        serFormData({
+        setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
