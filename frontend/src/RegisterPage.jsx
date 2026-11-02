@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
     const[formData, setFormData] = useState({
@@ -20,6 +20,8 @@ function RegisterPage() {
             [e.target.name]: e.target.value
         })
     }
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -43,6 +45,7 @@ function RegisterPage() {
             );
 
             alert(response.data.message);
+            navigate('/login')
         }
         catch (error){
             if(error.response){
