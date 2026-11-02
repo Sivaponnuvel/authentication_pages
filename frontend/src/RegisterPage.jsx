@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 function RegisterPage() {
     const[formData, setFormData] = useState({
@@ -100,7 +101,7 @@ function RegisterPage() {
             
             <button type='submit' className='register-button'>Register Now</button>
 
-            <p className='login-text'>Already have an account <a href="/login">Login</a></p>
+            <p className='login-text'>Already have an account <NavLink to="/login">Login</NavLink></p>
 
         </form>
     </div>
