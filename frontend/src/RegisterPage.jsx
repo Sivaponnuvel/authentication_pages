@@ -46,7 +46,7 @@ function RegisterPage() {
         catch (error){
             if(error.response){
                 console.log(error.response.data);
-                alert(JSON.stringify(error.response.data));
+                alert(Object.values(error.response.data).flat().join('\n'));
             }
             else{
                 alert("Unable to connect to the server");

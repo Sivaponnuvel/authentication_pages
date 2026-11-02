@@ -4,7 +4,7 @@ import RegisterPage from './RegisterPage'
 
 function App() {
     return(
-        <LoginPage />
+        <RegisterPage />
     )
 }
 
